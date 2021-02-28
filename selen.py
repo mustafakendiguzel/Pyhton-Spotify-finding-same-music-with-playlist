@@ -10,7 +10,6 @@ def Getting_account1(acclist1):
   driver = webdriver.Chrome(r"C:\chromedriver")
   driver.get(acclist1)
   driver.implicitly_wait(2)
-  driver.findElement(By.tagName("body")).sendKeys("Keys.ESCAPE");
   driver.maximize_window()
   sarki_isim = driver.find_elements_by_class_name('_8ea0b892e971e6b90a252247c160b4f4-scss')
   i = 0
