@@ -1,4 +1,6 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 # Sadece bu kismin alti degistirilecek
 list1 = "https://open.spotify.com/playlist/60Xe5cJDpcbiHbWwsayOsj?si=3b247bf0ece24ede"
@@ -6,7 +8,8 @@ list2 = "https://open.spotify.com/playlist/4rEP2SYmsoGWRvXIc7W6qd?si=45ca9bff1d1
 # Sadece bu kismin ustu degistirilecek
 
 def Getting_account1(acclist1):
-  driver = webdriver.Chrome(r"C:\chromedriver")
+  driver = webdriver.Chrome(ChromeDriverManager().install())
+
  
   driver.get(acclist1)
   driver.implicitly_wait(2)
@@ -26,7 +29,7 @@ def Getting_account1(acclist1):
 
 
 def Getting_account2(acclist2):
-  driver = webdriver.Chrome(r"C:\chromedriver")
+  driver = webdriver.Chrome(ChromeDriverManager().install())
   driver.get(acclist2)
   driver.implicitly_wait(2)
   driver.maximize_window()
